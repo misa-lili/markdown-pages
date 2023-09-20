@@ -64,7 +64,7 @@
 		bind:innerText={input}
 		on:keydown={handleKeydown}
 	/>
-	<div class="container" id="preview--container">
+	<div class="container" id="preview">
 		{@html html}
 	</div>
 </div>
@@ -75,6 +75,13 @@
 </div>
 
 <style>
+	@font-face {
+		font-family: 'D2Coding';
+		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff')
+			format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
 	:global(html, body) {
 		margin: 0;
 		padding: 0;
@@ -83,8 +90,12 @@
 	#editor {
 		white-space: pre-wrap;
 		/* tab-size: 2; */
-		font-family: 'Courier New', Courier, monospace;
+		font-family: 'D2Coding', monospace;
 		outline-width: 0;
+	}
+
+	:global(code) {
+		font-family: 'D2Coding', monospace;
 	}
 
 	#tool-bar {
